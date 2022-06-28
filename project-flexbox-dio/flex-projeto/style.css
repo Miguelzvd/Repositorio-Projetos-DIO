@@ -1,46 +1,110 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Open Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
-ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-ul li a{
-    text-decoration: none;
+ul li a {
+  text-decoration: none;
 }
 
-.flex-container{
-    display: flex;
-    max-width: 992px;
-    margin: auto;
-    width: 100%;
+div img {
+  display: block;
+  width: 100%;
 }
 
-header{
-    background-color: #122A57;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    color: #fff;
+.flex-container {
+  display: flex;
+  max-width: 992px;
+  margin: auto;
+  width: 100%;
 }
 
-header .list-items{
-    display: flex;
-    max-width: 260px;
-    width: 100%;
-    justify-content: space-between;
+header {
+  background-color: #122a57;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  color: #fff;
 }
 
-.list-items li a{
-    color: #fff;
+header .list-items {
+  display: flex;
+  max-width: 260px;
+  width: 100%;
+  justify-content: space-between;
 }
 
-header .menu{
-    justify-content: space-between;
-    align-items: center;
+.list-items li a {
+  color: #fff;
+}
+
+header .menu {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apresentacao {
+  height: 80vh;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.apresentacao .texto-apresentacao {
+  height: 200px;
+}
+
+.texto-apresentacao h1 {
+  color: #122a57;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.texto-apresentacao a {
+  background-color: #122a57;
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  border-radius: 30px;
+  padding: 8px 4px 8px 4px;
+  margin: 10px 0 10px 0;
+}
+
+#quem-somos {
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+#quem-somos h2 {
+  font-size: 32px;
+  color: #122a57;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+#quem-somos p {
+  text-align: justify;
+  margin-bottom: 10px;
+  width: 90%;
+}
+
+#quem-somos h2::before {
+  content: "";
+  height: 50px;
+  width: 5px;
+  margin-right: 5px;
+  background-color: #122a57;
+  position: relative;
+}
+
+#quem-somos img{
+    width: 420px;
 }
