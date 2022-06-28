@@ -1,8 +1,6 @@
 # dio-desafios-github
 
-## ola mundo!!! :wave:
+## Repositório criado para projetos da dio
 
-Repositório criado para o Desafio de Projeto
-
-## Links úteis
+### Links úteis
 [Sintaxe Basica Markdown](https://www.markdownguide.org/basic-syntax/)
