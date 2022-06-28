@@ -1,4 +1,4 @@
-# dio-desafio-github
+# dio-desafios-github
 
 ## ola mundo!!! :wave:
 
