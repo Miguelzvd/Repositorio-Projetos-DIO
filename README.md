@@ -1,6 +1,6 @@
 # dio-desafios-github
 
-Repositório criado para o Desafio de Projetos
+##Repositório criado para projetos da dio
 
-## Links úteis
+### Links úteis
 [Sintaxe Basica Markdown](https://www.markdownguide.org/basic-syntax/)
