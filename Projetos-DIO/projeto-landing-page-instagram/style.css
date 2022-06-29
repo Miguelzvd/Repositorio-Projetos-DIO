@@ -141,16 +141,28 @@ body {
 
 /*mobile*/
 
-@media (max-width: 1108px) {
-  .instagram-phone {
-    display: none;
-  }
+@media (max-width: 1024px) {
 
   .instagram-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    height: 100vh;
+    width: 90%;
   }
+
 }
+
+@media (max-width: 730px) {
+    body {
+        background: #fff;
+    }
+
+    .instagram-phone{
+        display: none;
+    }
+
+    .instagram-continue {
+        width: 100%;
+    }
+
+    .group{
+        border: 1px solid transparent;
+    }
+  }
