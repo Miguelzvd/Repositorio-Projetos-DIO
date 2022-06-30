@@ -36,6 +36,6 @@ function greater_than_0(number){
         currentNumberWrapper.style.color = 'red';
     } 
     else{
-        currentNumberWrapper.style.color = 'white';
+        currentNumberWrapper.style.color = 'black';
     }
 }
