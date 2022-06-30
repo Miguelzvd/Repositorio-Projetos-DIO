@@ -31,7 +31,7 @@ body {
   align-items: center;
   max-width: 750px;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .instagram-phone {
@@ -63,7 +63,6 @@ body {
   flex-direction: column;
   background-color: #fff;
   width: 350px;
-
   padding: 1.3rem 0;
   border: 1px solid lightgray;
 }
@@ -172,5 +171,29 @@ body {
 
     .group{
         border: 1px solid transparent;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .instagram-continue {
+      height: 50%;
+    }
+
+    .group {
+      width: 50%;
+      text-align: center;
+    }
+
+    .download {
+      width: 50%;
+      flex-direction: column;
+    }
+    
+    .app-download {
+      height: 3rem;
+    }
+
+    footer{
+      text-align: center;
     }
   }
