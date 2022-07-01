@@ -6,8 +6,8 @@ var currentNumber = 0;
 var count_increment = 0;
 var count_decrement = 0;
 
-increment_.addEventListener("click", increment);
-decrement_.addEventListener("click", decrement);
+increment_.addEventListener('click', increment);
+decrement_.addEventListener('click', decrement);
 
 console.log("hello, world!")
 

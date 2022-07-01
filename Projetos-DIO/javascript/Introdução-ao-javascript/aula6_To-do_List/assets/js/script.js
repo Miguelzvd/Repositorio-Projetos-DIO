@@ -1,41 +1,16 @@
-var currentNumberWrapper = document.getElementById('currentNumber');
-var increment_ = document.getElementsByName('adicionar')[0];
-var decrement_ = document.getElementsByName('subtrair')[0];
+var add = document.getElementById('add');
+var nome_item = document.getElementById('nome_item');
+var list_item = document.getElementsByClassName('list')[0];
+var checkbox = document.querySelectorAll('input[type=checkbox]');
 
-var currentNumber = 0;
-var count_increment = 0;
-var count_decrement = 0;
+console.log(checkbox);
 
-increment_.addEventListener("click", increment);
-decrement_.addEventListener("click", decrement);
+add.addEventListener('click', add_item);
 
-console.log("hello, world!")
-
-function increment(){
-    count_increment += 1;
-    
-    if (count_increment <= 10){
-        currentNumber = currentNumber + 1;
-        currentNumberWrapper.innerHTML = currentNumber;
-        greater_than_0(currentNumber);
+function add_item(){
+    if(nome_item.value !== ""){
+        let item = `<div><input type="checkbox"><span>${nome_item.value}</span></div>`;
+        list_item.innerHTML += item;
     }
-}
-
-function decrement(){
-    count_decrement += 1;
-
-    if (count_decrement <= 10){
-        currentNumber = currentNumber - 1;
-        currentNumberWrapper.innerHTML = currentNumber;
-        greater_than_0(currentNumber);
-    }
-}
-
-function greater_than_0(number){
-    if (number < 0){
-        currentNumberWrapper.style.color = 'red';
-    } 
-    else{
-        currentNumberWrapper.style.color = 'black';
-    }
+    nome_item.value = null;
 }
