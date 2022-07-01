@@ -1,6 +1,6 @@
 # To-do list
 ## Apresentação do projeto:
-Este projeto é sobre uma lista de checkout de tarefas.
+Este projeto é sobre uma checklist tarefas.
 
 ### Funcionalidades:
 - O usário pode adicionar novas tarefas
