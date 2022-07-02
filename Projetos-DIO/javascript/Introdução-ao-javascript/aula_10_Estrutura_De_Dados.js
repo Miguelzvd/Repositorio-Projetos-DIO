@@ -45,3 +45,24 @@ let exemplo = new String("blablabla");
 console.log(exemplo);
 
 console.log("-----------------------------------");
+
+//numeros:
+
+let num = 100;
+
+console.log(num + 3);
+
+let PI = Math.PI;
+
+console.log(PI);
+console.log(Math.floor(PI)); // arredonda o numero para baixo.
+console.log(Math.ceil(PI)); // arredonda o numero para cima.
+console.log(Math.round(PI)); // arredonda o numero.
+
+let porcento = 100;
+
+console.log(porcento + "%"); // retorna uma string.
+
+console.log(porcento.toString()); // converte um numero em uma string.
+
+console.log("-----------------------------------");
