@@ -46,7 +46,7 @@ console.log(exemplo);
 
 console.log("-----------------------------------");
 
-//numeros:
+// Números:
 
 let num = 100;
 
@@ -66,3 +66,66 @@ console.log(porcento + "%"); // retorna uma string.
 console.log(porcento.toString()); // converte um numero em uma string.
 
 console.log("-----------------------------------");
+
+//Booleano:
+
+let validation = 3 === 0;
+
+console.log(validation);
+
+validation = 3 === 3;
+
+console.log(validation);
+
+console.log("-----------------------------------");
+
+
+// Array:
+
+// Existem duas forma de declarar arrays.
+
+let array1 = []; 
+let array2 = new Array();
+
+console.log(array1);
+
+console.log(array2);
+
+array1.push(3);
+
+console.log(array1);
+
+array1.push(2); //  adiciona elemento no final da lista.
+
+console.log(array1.length);
+
+array1.pop(); // tira o elemento do final da lista/array.
+
+console.log(array1);
+
+array1.push(2);
+
+console.log(array1);
+
+array1.shift(); // tira o elemento do inicio da lista/array.
+
+console.log(array1);
+
+array1.unshift(3); //adiciona elemento no inicio da lista
+
+console.log("loop:")
+
+for(let i = 0; i < array1.length; i++){
+    console.log(array1[1]);
+}
+
+console.log(array1.includes(4)); // checa se dentro do array existe o elemento especificado no paramentro.
+
+console.log(array1.every(item => item === 3)); //checa se todos os elementos dentro do array é igual ao elemento especificado dentro do array.
+
+console.log(array1.some(item => item ===3)); // checa se existe dentro do array pelo menos um elemento especificado no parametro.
+
+console.log(array1.reverse()); // inverte a ordem da lista/array
+
+console.log("-----------------------------------");
+
