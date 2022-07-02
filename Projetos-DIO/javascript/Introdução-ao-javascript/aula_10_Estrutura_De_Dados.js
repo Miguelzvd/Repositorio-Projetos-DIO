@@ -129,3 +129,42 @@ console.log(array1.reverse()); // inverte a ordem da lista/array
 
 console.log("-----------------------------------");
 
+// Objetos:
+
+let obj = {};
+
+console.log(typeof obj); // retorna o tipo de dado como objeto.
+
+obj.name = "Miguel"; // adicionando key de nome "name" com valor "Miguel".
+
+console.log(obj);
+
+obj.age = 22; // adicionando key de nome "age" com valor "20".
+
+console.log(obj); 
+
+console.log(Object.values(obj)); // para saber quais são os valores das keys do objeto.
+
+console.log(Object.keys(obj)); // para saber quai são os nomes dos objeto.
+
+let person = {
+    name: "Julia",
+    age: 30,
+    addres: "Rua 5"
+}
+
+console.log(person.name); // mostra o valor da key especificada.
+
+console.log(person["name"]); // outra maneira de mostrar o valor da key especificada.
+
+person["pet"] = "cat"; // outra maneira de atribuir um valor a uma key especifica.
+
+console.log(person);
+
+let mom = "nameOfMom";
+
+person[mom] = "maria";
+
+console.log(person);
+
+console.log("-----------------------------------");
