@@ -153,3 +153,68 @@ pessoa.fullName(); // Retorna o nome completo da pessoa.
 pessoa.getId(); // Retorna o id da pessoa.
 
 pessoa.returnObj(); // Retorna o objeto.
+
+console.log("------------------------------");
+
+// Manipulando this:
+
+const pessoa_ = {
+    nome: "Miguel"
+};
+
+const animal = {
+    nome: "Tony"
+};
+
+function getSomething() {
+    return console.log(this.nome);
+}
+
+getSomething.call(pessoa_); //call() é um metodo do objeto "fução" que possibilita colocar o objeto no qual o this ira se referir, mesmo a funcção não esperando parametro. (Só é possivel utiliza-la se estiver usando a palavra reservada "this").
+
+getSomething.apply(pessoa_); //apply() nesse caso tem a mesma funcionalidade do metodo call.
+
+const myObj = {
+    num1: 2,
+    num2: 4,
+};
+
+function soma_(a, b){
+    console.log(this.num1 + this.num2 + a + b);
+}
+
+soma_.call(myObj, 1, 5); // É possivel passar parametros para essa função separando-os por virgula.
+
+soma_.apply(myObj, [1, 5]); // Nesse caso a diferença tá que o apply so recebe paramentros dentro de array.
+
+console.log("------------------------------");
+
+// Bind: Clona a estrutura da função onde é chamada e aplica o valor do objeto passado como parâmetro.
+
+const retornaNomes = function(){
+    return console.log(this.nome);
+}
+
+let bruno = retornaNomes.bind({nome: 'Bruno'});
+
+bruno();
+
+// Arrow function: () => {};
+
+const helloWorld = () => { // Isso é uma arrow function.
+    return console.log("Hello World: arrow function 1");
+}
+
+// Tambem pode ser escrita dessa maneira
+
+const HelloWorld = () => console.log("Hello World: arrow function 2");
+
+helloWorld();
+
+HelloWorld();
+
+const Soma1 = (a, b) => console.log(a + b); // Caso exista apenas uma linha, pode dispensar as chaves.
+
+const mostrarNum = a => console.log(a); // Caso exista apenas um parâmetro, pode dispensar o parênteses.
+
+var Soma2 = (a, b) => console.log(a + b);
