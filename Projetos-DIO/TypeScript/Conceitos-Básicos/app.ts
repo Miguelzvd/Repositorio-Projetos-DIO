@@ -1,56 +1,19 @@
-const pessoa = {
-    nome: 'mariana',
-    idade: 28,
-    profissao: 'desenvolvedora'
+// Apenas um exemplo para mostrar a funcionalidade do 'any'.
+// Vale ressaltar que é uma má prática utiliza-lo, então não utlize-o.
+
+let valorAny: any;
+valorAny = 3;
+valorAny = 'ola';
+valorAny = true;
+
+let valorStrig1: string = 'test'
+valorStrig1 = valorAny;
+let valorStrig2: string = 'testao'
+valorStrig2 = valorAny;
+
+function somarStrings(string1: string, string2: string){
+    console.log(string1 + string2)
 }
 
-pessoa.idade = 25;
-
-const andre: {nome: string, idade: number, profissao: string} = {
-    nome: 'ander',
-    idade: 25,
-    profissao: 'pintor'
-}
-
-const paula: {nome: string, idade: number, profissao: string} = {
-    nome: 'Paula',
-    idade: 25,
-    profissao: 'Desenvolvedora'
-}
-
-enum Profissao{ // Um grupo de constante
-    Professora,
-    Atriz,
-    Desenvolvedora,
-    JogadoraDeFutebol
-}
-
-interface Pessoa{
-    nome: string,
-    idade: number,
-    profissao?: Profissao
-}
-
-interface Estudante extends Pessoa {
-    materias: string[]
-}
-
-const fulano: Pessoa = {
-    nome: 'fulano', 
-    idade: 23,
-    profissao: Profissao.Desenvolvedora
-}
-
-const fulana: Estudante = {
-    nome: 'fulana',
-    idade: 20,
-    profissao: Profissao.Professora,
-    materias: ['Matemática discreta', 'Programação']
-}
-
-const joao: Estudante = {
-    nome: 'joao',
-    idade: 20,
-    profissao: Profissao.Professora,
-    materias: ['Matemática discreta', 'Programação']
-}
+somarStrings(valorStrig1, valorStrig2);
+somarStrings('Ola', ', como vai?')

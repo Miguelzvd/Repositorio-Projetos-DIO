@@ -1,41 +1,16 @@
 "use strict";
-const pessoa = {
-    nome: 'mariana',
-    idade: 28,
-    profissao: 'desenvolvedora'
-};
-pessoa.idade = 25;
-const andre = {
-    nome: 'ander',
-    idade: 25,
-    profissao: 'pintor'
-};
-const paula = {
-    nome: 'Paula',
-    idade: 25,
-    profissao: 'Desenvolvedora'
-};
-var Profissao;
-(function (Profissao) {
-    Profissao[Profissao["Professora"] = 0] = "Professora";
-    Profissao[Profissao["Atriz"] = 1] = "Atriz";
-    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
-    Profissao[Profissao["JogadoraDeFutebol"] = 3] = "JogadoraDeFutebol";
-})(Profissao || (Profissao = {}));
-const fulano = {
-    nome: 'fulano',
-    idade: 23,
-    profissao: Profissao.Desenvolvedora
-};
-const fulana = {
-    nome: 'fulana',
-    idade: 20,
-    profissao: Profissao.Professora,
-    materias: ['Matemática discreta', 'Programação']
-};
-const joao = {
-    nome: 'joao',
-    idade: 20,
-    profissao: Profissao.Professora,
-    materias: ['Matemática discreta', 'Programação']
-};
+// Apenas um exemplo para mostrar a funcionalidade do 'any'.
+// Vale ressaltar que é uma má prática utiliza-lo, então não utlize-o.
+let valorAny;
+valorAny = 3;
+valorAny = 'ola';
+valorAny = true;
+let valorStrig1 = 'test';
+valorStrig1 = valorAny;
+let valorStrig2 = 'testao';
+valorStrig2 = valorAny;
+function somarStrings(string1, string2) {
+    console.log(string1 + string2);
+}
+somarStrings(valorStrig1, valorStrig2);
+somarStrings('Ola', ', como vai?');
