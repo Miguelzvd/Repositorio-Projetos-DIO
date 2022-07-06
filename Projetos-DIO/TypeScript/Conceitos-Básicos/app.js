@@ -1,16 +1,41 @@
-// let button = document.getElementById('button');
-// let input1 = document.getElementById('1');
-// let input2 = document.getElementById('2');
-
-// function soma(numero1, numero2){
-//     if (typeof numero1 === 'number' && typeof numero1 === 'number') {
-//         return numero1 + numero2
-//     }
-//     else {
-//     return Number(numero1) + Number(numero2);
-//     }
-// }
-
-// button.addEventListener('click', () => {
-//     console.log(soma(input1.value, input2.value));
-// });
+"use strict";
+const pessoa = {
+    nome: 'mariana',
+    idade: 28,
+    profissao: 'desenvolvedora'
+};
+pessoa.idade = 25;
+const andre = {
+    nome: 'ander',
+    idade: 25,
+    profissao: 'pintor'
+};
+const paula = {
+    nome: 'Paula',
+    idade: 25,
+    profissao: 'Desenvolvedora'
+};
+var Profissao;
+(function (Profissao) {
+    Profissao[Profissao["Professora"] = 0] = "Professora";
+    Profissao[Profissao["Atriz"] = 1] = "Atriz";
+    Profissao[Profissao["Desenvolvedora"] = 2] = "Desenvolvedora";
+    Profissao[Profissao["JogadoraDeFutebol"] = 3] = "JogadoraDeFutebol";
+})(Profissao || (Profissao = {}));
+const fulano = {
+    nome: 'fulano',
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+};
+const fulana = {
+    nome: 'fulana',
+    idade: 20,
+    profissao: Profissao.Professora,
+    materias: ['Matemática discreta', 'Programação']
+};
+const joao = {
+    nome: 'joao',
+    idade: 20,
+    profissao: Profissao.Professora,
+    materias: ['Matemática discreta', 'Programação']
+};

@@ -1,10 +1,56 @@
-let button = document.getElementById('button');
-let input1 = document.getElementById('1');
-let input2 = document.getElementById('2');
-
-function adicionarNumero(numero1: number, numero2: number){
-    return numero1 + numero2
+const pessoa = {
+    nome: 'mariana',
+    idade: 28,
+    profissao: 'desenvolvedora'
 }
 
+pessoa.idade = 25;
 
-button.addEventListener('click', adicionarNumero()) HTMLElement
+const andre: {nome: string, idade: number, profissao: string} = {
+    nome: 'ander',
+    idade: 25,
+    profissao: 'pintor'
+}
+
+const paula: {nome: string, idade: number, profissao: string} = {
+    nome: 'Paula',
+    idade: 25,
+    profissao: 'Desenvolvedora'
+}
+
+enum Profissao{ // Um grupo de constante
+    Professora,
+    Atriz,
+    Desenvolvedora,
+    JogadoraDeFutebol
+}
+
+interface Pessoa{
+    nome: string,
+    idade: number,
+    profissao?: Profissao
+}
+
+interface Estudante extends Pessoa {
+    materias: string[]
+}
+
+const fulano: Pessoa = {
+    nome: 'fulano', 
+    idade: 23,
+    profissao: Profissao.Desenvolvedora
+}
+
+const fulana: Estudante = {
+    nome: 'fulana',
+    idade: 20,
+    profissao: Profissao.Professora,
+    materias: ['Matemática discreta', 'Programação']
+}
+
+const joao: Estudante = {
+    nome: 'joao',
+    idade: 20,
+    profissao: Profissao.Professora,
+    materias: ['Matemática discreta', 'Programação']
+}
