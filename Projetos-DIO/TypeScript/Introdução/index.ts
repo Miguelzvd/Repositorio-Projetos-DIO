@@ -109,24 +109,24 @@
 // //---------------------------------------------------------
 
 
-// Aula 3
-// Generic types
-function AdicionaApendiceALista<T>(arr:T[], valor:T){
-    return arr.map(() => valor);
-}
+// // Aula 3
+// // Generic types
+// function AdicionaApendiceALista<T>(arr:T[], valor:T){
+//     return arr.map(() => valor);
+// }
 
-AdicionaApendiceALista([1, 2, 3], 1);
+// AdicionaApendiceALista([1, 2, 3], 1);
 
-//---------------------------------------------------------
+// //---------------------------------------------------------
 
 
-// Aula 2
-const input = document.getElementById('input') as HTMLInputElement; // É necessario declaro o tipo de dado HTML está capturando.
+// // Aula 2
+// const input = document.getElementById('input') as HTMLInputElement; // É necessario declaro o tipo de dado HTML está capturando.
 
-input.addEventListener('input', (event) => {
-    const i = event.currentTarget as HTMLInputElement;
-    console.log(i.value);
-})
+// input.addEventListener('input', (event) => {
+//     const i = event.currentTarget as HTMLInputElement;
+//     console.log(i.value);
+// })
 
 
 // //---------------------------------------------------------
