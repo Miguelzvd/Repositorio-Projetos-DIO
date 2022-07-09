@@ -4,4 +4,3 @@
 interface JQuery{
     novaFuncao(): void;
 }
-//Teste
