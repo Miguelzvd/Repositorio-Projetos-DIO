@@ -14,7 +14,7 @@
     </thead>
     <tbody>
         <tr *ngFor="let course of courses"> <!--Loop para integrar os valores dos cursos-->
-            <td>{{ course.imageUrl }}</td>
+            <td><img [src]="course.imageUrl" alt=""></td> <!--Para se utilizar um valor de uma propriedade dentro de um atributo, deve fazer desta maneira-->
             <td>{{ course.name }}</td>
             <td>{{ course.price }}</td>
             <td>{{ course.code }}</td>
