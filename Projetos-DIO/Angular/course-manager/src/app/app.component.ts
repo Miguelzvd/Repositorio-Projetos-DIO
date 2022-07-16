@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'course-manager';
+
+  name: string = 'Miguel';
+  name2: string = 'tow way data bind';
 }
