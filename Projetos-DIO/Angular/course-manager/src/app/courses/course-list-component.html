@@ -14,12 +14,14 @@
     </thead>
     <tbody>
         <tr *ngFor="let course of courses"> <!--Loop para integrar os valores dos cursos-->
-            <td><img [src]="course.imageUrl" alt=""></td> <!--Para se utilizar um valor de uma propriedade dentro de um atributo, deve fazer desta maneira-->
+            <td><img [src]="course.imageUrl" width="40" height="40"></td> <!--Para se utilizar um valor de uma propriedade dentro de um atributo, deve fazer desta maneira-->
             <td>{{ course.name }}</td>
             <td>{{ course.price }}</td>
             <td>{{ course.code }}</td>
             <td>{{ course.releaseDate }}</td>
-            <td>{{ course.rating }}</td>
+            <td>
+                <app-star [rating]="course.rating"></app-star>
+            </td>
             <td></td>
         </tr>
     </tbody>
