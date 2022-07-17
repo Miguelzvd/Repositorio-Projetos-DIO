@@ -10,12 +10,14 @@ import { StarComponent } from './star/star.component';
 import { ReplacePipe } from './pipe/release.pip';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { Error404Component } from './error-404/error-404.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CourseListComponent,
+    CourseInfoComponent,
     StarComponent,
     ReplacePipe,
     NavBarComponent,
@@ -24,6 +26,7 @@ import { Error404Component } from './error-404/error-404.component';
   imports: [
     BrowserModule,
     FormsModule,
+    CommonModule,
     RouterModule.forRoot([ // server para criar as rotas da aplicacao
     {
       path: 'courses', component: CourseListComponent // rota criada para o componente de lista cursos

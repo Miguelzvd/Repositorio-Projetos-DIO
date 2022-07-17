@@ -1,5 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
+import { Course } from './course';
+import { CourseService } from './course.service';
 
 @Component({
     templateUrl: './course-info.component.html'
@@ -7,12 +9,12 @@ import { ActivatedRoute } from "@angular/router";
 
 export class CourseInfoComponent implements OnInit{ // Auxilia na navegacao de rotas ativas
 
-    courseId!: number;
+    course!: Course;
 
-    constructor(private activatedRoute: ActivatedRoute) { }
+    constructor(private activatedRoute: ActivatedRoute, private courseService: CourseService) { }
 
     ngOnInit(): void {
-        this.courseId = Number(this.activatedRoute.snapshot.paramMap.get('id'));
+        this.course = this.courseService.retrieveById(Number(this.activatedRoute.snapshot.paramMap.get('id'))); // para capturar a rota ativa.
     }
 
 }
