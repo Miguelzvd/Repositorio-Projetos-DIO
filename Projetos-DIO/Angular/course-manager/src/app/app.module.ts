@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { CourseListComponent } from './courses/course-list-component';
 import { StarComponent } from './star/star.component';
@@ -26,7 +28,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     BrowserModule,
     FormsModule,
-    CommonModule,
+    HttpClientModule, // para trabalhar com http
     RouterModule.forRoot([ // server para criar as rotas da aplicacao
     {
       path: 'courses', component: CourseListComponent // rota criada para o componente de lista cursos

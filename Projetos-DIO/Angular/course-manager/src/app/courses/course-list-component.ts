@@ -22,9 +22,18 @@ export class CourseListComponent implements OnInit { // OnInit: realiza uma oper
 
     //Aqui esta chamando a funcao do OnInit
     ngOnInit(): void {
-        this._courses = this.courseSevice.retrieveAll();
-        this._filteredCourses = this._courses;
+        this.retrieveAll();
     };
+
+    retrieveAll(): void {
+        this.courseSevice.retrieveAll().subscribe({
+            next: courses => {// esse courses eh o retorno do observable.
+                this._courses = courses;
+                this._filteredCourses = this._courses;
+            },
+            error: err => console.log('Error', err)
+        })
+    }
 
     set filter(value: string) {
         this._filterBy = value;
