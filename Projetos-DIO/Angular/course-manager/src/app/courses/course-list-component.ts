@@ -12,16 +12,28 @@ import { Course } from "./course";
 //exporta a classe CoursesListComponent
 export class CourseListComponent implements OnInit { // OnInit: realiza uma operacao no momento que o componente for inicializado
 
+    _filteredCourses: Course[] = [];
+
     //importando a classe Course sendo array, por isso eh representada como "Course[]"
-    courses: Course[] = [];//Foi criada a propriedade course sendo um array a partir da classe "Course"
+    _courses: Course[] = [];//Foi criada a propriedade course sendo um array a partir da classe "Course"
+    
+    _filterBy!: string;
 
-    constructor(private courseSevice :CourseService){
-
-    }
+    constructor(private courseSevice :CourseService){ }//Captura a injecao de classes
 
     //Aqui esta chamando a funcao do OnInit
     ngOnInit(): void {
-        this.courses = this.courseSevice.retrieveAll();
+        this._courses = this.courseSevice.retrieveAll();
+        this._filteredCourses = this._courses;
     };
 
+    set filter(value: string) {
+        this._filterBy = value;
+
+        this._filteredCourses = this._courses.filter((course: Course) => course.name.toLowerCase().indexOf(this._filterBy.toLowerCase()) > -1);
+    }
+
+    get filter() {
+        return this._filterBy;
+    }
 };
