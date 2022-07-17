@@ -5,7 +5,6 @@ import { Course } from "./course";
 //No componente principal deve haver apenas logica, os dados devem ser guadados em outro arquivo chamado service
 
 @Component({
-    selector: 'app-course-list',
     templateUrl: './course-list-component.html' //aqui ele esta buscando o template no arquivo .html
 })
 
