@@ -18,7 +18,7 @@ export class CourseListComponent implements OnInit { // OnInit: realiza uma oper
     
     _filterBy!: string;
 
-    constructor(private courseSevice :CourseService){ }//Captura a injecao de classes
+    constructor(private courseSevice: CourseService){ }//Captura a injecao de classes
 
     //Aqui esta chamando a funcao do OnInit
     ngOnInit(): void {

@@ -1,3 +1,4 @@
+import { CourseInfoComponent } from './courses/course-info.component';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -24,11 +25,14 @@ import { Error404Component } from './error-404/error-404.component';
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([ // server para criar as rotas da aplicacao
-      {
+    {
+      path: 'courses', component: CourseListComponent // rota criada para o componente de lista cursos
+    }, 
+    {
+      path: 'courses/info/:id', component: CourseInfoComponent // criando rota para info-component
+    }, 
+    {
         path: '', redirectTo: 'courses', pathMatch:'full' // esta rota corresponde a raiz a da aplicacao, ele redireciona para o caminho do componente de lista de cursos.
-      },
-      {
-        path: 'courses', component: CourseListComponent // rota criada para o componente de lista cursos
       },
       {
         path: '**', component: Error404Component // esta rota corresponde a um direcionamento nao existente, ela direciona para o compoenente de error 404.
