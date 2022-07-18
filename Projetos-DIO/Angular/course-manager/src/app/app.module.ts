@@ -20,7 +20,7 @@ import { CourseModule } from './courses/course-module';
     CoreModule,
     RouterModule.forRoot([ // server para criar as rotas para a aplicacao
       {
-        path: 'courses', redirectTo: 'courses', pathMatch:'full' // esta rota corresponde a raiz a da aplicacao, ele redireciona para o caminho do componente de lista de cursos.
+        path: '', redirectTo: 'courses', pathMatch:'full' // esta rota corresponde a raiz a da aplicacao, ele redireciona para o caminho do componente de lista de cursos.
       },
       
     ])
