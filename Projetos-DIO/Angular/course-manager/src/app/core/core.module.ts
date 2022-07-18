@@ -11,6 +11,9 @@ import { Error404Component } from './component/error-404/error-404.component';
     imports: [
         RouterModule.forChild([
             {
+                path: '', redirectTo: 'courses', pathMatch:'full' // esta rota corresponde a raiz a da aplicacao, ele redireciona para o caminho do componente de lista de cursos.
+            },
+            {
                 path: '**', component: Error404Component// esta rota corresponde a um direcionamento nao existente, ela direciona para o compoenente de error 404.
             },
         ])

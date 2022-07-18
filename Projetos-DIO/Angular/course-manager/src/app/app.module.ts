@@ -22,7 +22,6 @@ import { CourseModule } from './courses/course-module';
       {
         path: '', redirectTo: 'courses', pathMatch:'full' // esta rota corresponde a raiz a da aplicacao, ele redireciona para o caminho do componente de lista de cursos.
       },
-      
     ])
   ],
   providers: [],
