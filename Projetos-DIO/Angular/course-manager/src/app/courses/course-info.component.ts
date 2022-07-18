@@ -26,4 +26,5 @@ export class CourseInfoComponent implements OnInit{ // Auxilia na navegacao de r
             error: err => console.log('Error', err)
         });
     };
+    
 };
