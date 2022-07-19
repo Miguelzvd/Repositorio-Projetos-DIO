@@ -1,3 +1,4 @@
+// Este eh um componente inteligente: fica responsavel por toda logica.
 import { CourseService } from './course.service';
 import { Component, OnInit } from "@angular/core";
 import { Course } from "./course";

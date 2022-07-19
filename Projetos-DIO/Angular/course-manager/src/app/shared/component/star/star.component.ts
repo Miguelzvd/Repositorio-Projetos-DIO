@@ -1,4 +1,4 @@
-import { style } from "@angular/animations";
+// Este eh um componente de apresentacao: fica responsavel apenas por se receber e exibir valores passados atraves do componente inteligente em seu template. 
 import { Component, Input, OnChanges } from "@angular/core";
 
 @Component ({
