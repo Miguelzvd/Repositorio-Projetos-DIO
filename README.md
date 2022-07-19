@@ -6,4 +6,3 @@
 - [Joguinho Para Treino De Flex Box](http://flexboxfroggy.com/)
 - [Prefixos Para CSS](http://shouldiprefix.com/#box-shadow)
 - [MDN Web Docs](https://developer.mozilla.org/en-US/)
-- bla bla
