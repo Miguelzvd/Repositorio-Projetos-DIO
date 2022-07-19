@@ -1,10 +1,24 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
 
-<mat-toolbar>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPA com Angular</title>
+</head>
+
+<body>
+
+  <mat-toolbar>
+    <button mat-icon-button [matMenuTriggerFor]="menu">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>My App</span>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <span> My first SPA</span>
     <span class="example-spacer"></span>
     <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
       <mat-icon>favorite</mat-icon>
@@ -12,5 +26,35 @@
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
       <mat-icon>share</mat-icon>
     </button>
-</mat-toolbar>
-  
+  </mat-toolbar>
+ 
+  <div>
+    
+    <spa-alunos [valorInicial]="valor"></spa-alunos> <!--Data biding do tipo valor-->
+
+    <button (click)="mudarValor()">Mudar Valor</button> <!--Data biding do tipo evento-->
+    <button (click)="reiniciarValor()">Reiniciar Valor</button>
+    <button (click)="exibirTabela()">Exibir Tabela</button>
+    
+  </div>
+
+  <table *ngIf="exibeTabela"> <!--Diretiva para interagir com os elementos dentro do html com condicional "if"-->
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>E-mail</th>
+      <th>Curso</th>
+    </tr>
+    <tr *ngFor="let aluno of listaAlunos"> <!--Diretiva para interagir com os elementos dentro do html com loop-->
+      <td>{{aluno.nome}}</td> <!--Data biding do tipo interpolacao-->
+      <td>{{aluno.idade}}</td>
+      <td>{{aluno.email}}</td>
+      <td>{{aluno.curso}}</td>
+    </tr>
+  </table>
+
+  <spa-professores></spa-professores>
+
+</body>
+
+</html>

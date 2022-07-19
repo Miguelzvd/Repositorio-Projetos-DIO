@@ -8,7 +8,7 @@ import { Component, Input, OnChanges } from "@angular/core";
 })
 export class StarComponent implements OnChanges { //Eh usado Onchange para atributos que recebem valores em constante mudancas, ou algo que acontece de forma assicrona.
 
-    @Input() //transforma todo este bloco como um receptor de valor. Vira uma tag do component.
+    @Input() //transforma todo este bloco como um receptor de valor. Vira um atributo do component.
     rating: number = 0
 
     starWidth!: number;
