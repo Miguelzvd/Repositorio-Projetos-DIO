@@ -9,9 +9,11 @@ export class AlunosComponent implements OnInit {
 
   constructor() { }
 
+  // ngOnchange: faz parte do life cycle hook.
+
   ngOnInit(): void {
   }
 
-  @Input() valorInicial: number = 0;
+  @Input() valorInicial: number = 0; // Especifica que essa variavel pode receber valores.
 
 }
