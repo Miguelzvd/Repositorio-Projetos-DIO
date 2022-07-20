@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
 
 @Component({
   selector: 'app-users-list',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersListComponent implements OnInit {
 
+  users: Array<User> = [] // O Array<User> traz o modelo de usuario como padrao para o array.
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getUser() {
+    
+  }
 }
