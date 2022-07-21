@@ -23,6 +23,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
 import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
 import { UpperCasePipe } from '@angular/common';
+import { PrintListPipe } from './print-list.pipe';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { UpperCasePipe } from '@angular/common';
     LifeCycleComponent,
     TodoListComponent,
     TodoItemComponent,
-    PipesExampleComponent
+    PipesExampleComponent,
+    PrintListPipe
   ],
   imports: [
     BrowserModule,

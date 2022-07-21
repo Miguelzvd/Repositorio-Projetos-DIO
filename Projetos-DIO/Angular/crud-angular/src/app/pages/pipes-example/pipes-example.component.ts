@@ -16,6 +16,7 @@ export class PipesExampleComponent implements OnInit {
     idade: 22,
     profissao: 'Desenvolvedor'
   }
+  nomes = ['Miguel']
 
   constructor(private upperCasePipe: UpperCasePipe) { }
 
@@ -26,5 +27,16 @@ export class PipesExampleComponent implements OnInit {
 
   mudaValor() {
     this.text = 'Novo texto';
+  }
+
+  add(text:string) {
+    if(text){
+      this.nomes.push(text);
+      console.log(this.nomes)
+      return
+    }
+    else {
+      return
+    }
   }
 }
