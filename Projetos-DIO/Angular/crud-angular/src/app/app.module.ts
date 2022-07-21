@@ -21,6 +21,7 @@ import { LifeCycleComponent } from './components/life-cycle/life-cycle.component
 import { TodoListComponent } from './pages/todo/todo-list/todo-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
+import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
     ButtonComponent,
     LifeCycleComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    PipesExampleComponent
   ],
   imports: [
     BrowserModule,
