@@ -7,7 +7,13 @@ import { Todo } from 'src/app/models/todo';
   styleUrls: ['./todo-list.component.css']
 })
 export class TodoListComponent implements OnInit {
-  todos: Array<Todo> = []
+  todos: Array<Todo> = [];
+
+  todo: Todo = {
+    id: 0,
+    title: '',
+    done: false
+  }
 
 
   constructor() { }
@@ -17,8 +23,11 @@ export class TodoListComponent implements OnInit {
   }
 
   addTodo(title: string) {
-    const id = this.todos.length + 1;
-    this.todos.push(new Todo(id, title, false))
-    console.log(this.todos)
+    this.todos.push({
+      id: this.todos.length + 1,
+      title: title,
+      done: false
+    });
+    console.log(this.todo)
   }
 }
