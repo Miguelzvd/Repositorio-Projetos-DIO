@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Todo } from 'src/app/models/todo';
 
 @Component({
@@ -14,6 +14,8 @@ export class TodoItemComponent implements OnInit {
     done: false
   };
 
+  @Output() remove = new EventEmitter;
+
   done = false;
 
   constructor() { }
@@ -22,7 +24,7 @@ export class TodoItemComponent implements OnInit {
   }
 
   removeTodo(): void {
-    console.log(this.todo)
+    this.remove.emit(this.todo) // "emit" serve para enviar algo do elemento filho para o elemento pai, nesse caso estamo ennviando o "this.todo"
   }
 
   markAsDone(): void {

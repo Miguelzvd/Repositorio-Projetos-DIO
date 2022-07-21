@@ -19,7 +19,14 @@ export class TodoListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    let items:any = localStorage.getItem('todos') // capturando o item na chave 'todo'
+    let todos = JSON.parse(items); // com o item capturado desempacotamos ele do JSON.stringfy com o JSON.parse
+    if(!todos) {
+      this.todos = [];
+    }
+    else{
+      this.todos = todos;
+    }
   }
 
   addTodo(title: string) {
@@ -29,5 +36,13 @@ export class TodoListComponent implements OnInit {
       done: false
     });
     console.log(this.todo)
+    localStorage.setItem('todos', JSON.stringify(this.todos)) // serve para salvar localmente os itens da lista. o JSON.stringfy serve para transformar o array em um tipo string de array.
+  }
+
+  removeTodo(todo: any) {
+    console.log('O elemento pai recebeu', todo);
+    let index = this.todos.indexOf(todo);
+    this.todos.splice(index, 1) // o metodo splice serve para deletar um elemento do array.
+    localStorage.setItem('todos', JSON.stringify(this.todos))
   }
 }
