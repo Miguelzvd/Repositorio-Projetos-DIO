@@ -1,5 +1,5 @@
 <mat-list-item role="listitem">
-  <p [ngStyle]="{textDecoration: done ? 'line-through' : 'none'}">{{ this.todo.title }}</p>
+  <p style="margin: 0" [ngStyle]="{textDecoration: done ? 'line-through' : 'none'}">{{ this.todo.title }}</p>
   <button mat-icon-button aria-label="Marca como concluido" (click)="markAsDone()">
     <mat-icon>done</mat-icon>
   </button>
