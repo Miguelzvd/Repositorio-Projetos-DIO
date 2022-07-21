@@ -12,6 +12,7 @@ import { DataBindingComponent } from './pages/data-binding/data-binding.componen
 import { ButtonComponent } from './components/button/button.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 import { TodoListComponent } from './pages/todo-list/todo-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,7 @@ import { TodoListComponent } from './pages/todo-list/todo-list.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule, 
-    ReactiveFormsModule
+    ReactiveFormsModule, BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
