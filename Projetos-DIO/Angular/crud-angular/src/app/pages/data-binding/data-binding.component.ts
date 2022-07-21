@@ -14,6 +14,8 @@ export class DataBindingComponent implements OnInit {
   fontSize = '20px'
   widthImg = 600
   inputText = ''
+  number = 0 
+  destroy = false
 
   constructor() { }
 
@@ -31,5 +33,13 @@ export class DataBindingComponent implements OnInit {
 
   clicouNoFilho(text: string){
     console.log(text)
+  }
+
+  incremento () {
+    this.number++
+  }
+
+  destroyComponent() {
+    this.destroy = true
   }
 }

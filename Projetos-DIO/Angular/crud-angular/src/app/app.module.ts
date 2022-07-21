@@ -11,6 +11,7 @@ import { UserFormComponent } from './pages/users/user-form/user-form.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { ButtonComponent } from './components/button/button.component';
 import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
+import { TodoListComponent } from './pages/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LifeCycleComponent } from './components/life-cycle/life-cycle.component
     UserFormComponent,
     DataBindingComponent,
     ButtonComponent,
-    LifeCycleComponent
+    LifeCycleComponent,
+    TodoListComponent
   ],
   imports: [
     BrowserModule,
