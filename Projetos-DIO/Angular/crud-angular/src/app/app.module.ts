@@ -10,6 +10,7 @@ import { UsersListComponent } from './pages/users/users-list/users-list.componen
 import { UserFormComponent } from './pages/users/user-form/user-form.component';
 import { DataBindingComponent } from './pages/data-binding/data-binding.component';
 import { ButtonComponent } from './components/button/button.component';
+import { LifeCycleComponent } from './components/life-cycle/life-cycle.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ButtonComponent } from './components/button/button.component';
     UsersListComponent,
     UserFormComponent,
     DataBindingComponent,
-    ButtonComponent
+    ButtonComponent,
+    LifeCycleComponent
   ],
   imports: [
     BrowserModule,

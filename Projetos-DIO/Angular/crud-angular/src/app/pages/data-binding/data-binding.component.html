@@ -10,3 +10,9 @@
 
 <input type="text" class="form-control" [(ngModel)]="inputText">
 <p class="text-default">{{ inputText }}</p>
+
+<app-button [btnText]="'Enviar'" [btnType]="'btn-danger'" (clickChildren)="clicouNoFilho($event)"></app-button>
+<app-button [btnText]="'Salvar'" [btnType]="'btn-success'"></app-button>
+<app-button [btnText]="'Clique aqui'" [btnType]="'btn-primary'"></app-button>
+
+<app-life-cycle></app-life-cycle>

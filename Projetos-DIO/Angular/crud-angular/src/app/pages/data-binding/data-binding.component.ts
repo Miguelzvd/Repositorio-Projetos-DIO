@@ -28,4 +28,8 @@ export class DataBindingComponent implements OnInit {
     console.log('clicou aqui', value)
     this.textRed = true;
   }
+
+  clicouNoFilho(text: string){
+    console.log(text)
+  }
 }
