@@ -1,9 +1,37 @@
 <div class="form-group">
     <label for="number">Number</label>
-    <input type="text" class="form-control" id="number">
+    <input type="text" [(ngModel)]="number" class="form-control" id="number">
+    <p>{{ number }}</p>
 </div>
 
 <div class="">
-    <p>{{ number }}</p>
+   
+    <button class="btn btn-success" (click)="mudaValor()">
+        Click
+    </button>
+    <p>SLICE: {{ text | slice:3:8 }}</p> <!--Especifica os valores do range da string a ser exibido-->
+
+    <p>sem formatacao:</p>
+    <p>{{ number | number}}</p>
+
+    <p>com formatacao</p>
+    <p>{{ number | number:'2.0-1'}}</p><!--Number: 2.0-1 indica q sera exebido apenas dois caracters antes da virgula e um caracter depois da virgula, por isso 2.0-1-->
+
+    <p>resultado em moeda</p>
+    <p>{{ number | currency:'BRL'}}</p>
+    
+    <p>resultado em porcentagem</p>
+    <p>{{ number | percent}}</p><!--Number: 2.0-1 indica q sera exebido apenas dois caracters antes da virgula e um caracter depois da virgula, por isso 2.0-1-->
+    
+    <p>Data de hoje sem formatacao</p>
+    <p>{{ data }}</p>
+    <p>Data de hoje com formatacao</p>
+    <p>{{ data | date | uppercase}}</p>
+    <p>Outros exemplos do pipe DATE</p>
+    <p>{{ data | date }}</p>
+    <p>DATA FORMATADA: {{ data | date:'dd/MM/yyyy': 'GMT-0300': 'en-US'}}</p>
+    <p>{{ data | date:'mediumTime'}}</p>
+
+    <p>{{ pessoa | json  }}</p>
     <p>{{ text }}</p>
 </div>

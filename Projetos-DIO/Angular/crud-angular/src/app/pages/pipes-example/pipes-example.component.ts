@@ -8,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PipesExampleComponent implements OnInit {
 
-  number = 0;
+  number!: number;
   text = 'hello world!';
+  data = new Date;
+  pessoa = {
+    nome: 'Miguel',
+    idade: 22,
+    profissao: 'Desenvolvedor'
+  }
 
   constructor(private upperCasePipe: UpperCasePipe) { }
 
@@ -18,4 +24,7 @@ export class PipesExampleComponent implements OnInit {
     this.text = this.upperCasePipe.transform(this.text)
   }
 
+  mudaValor() {
+    this.text = 'Novo texto';
+  }
 }
