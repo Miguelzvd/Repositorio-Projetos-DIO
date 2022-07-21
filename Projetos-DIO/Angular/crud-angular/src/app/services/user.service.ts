@@ -22,7 +22,7 @@ export class UserService {
   // C.R.U.D - CREAT, READ, UPDATE, DELETE
   // Retorna a lista de usuarios READ
 
-  getUser():Observable<User[]>{
+  getUsers():Observable<User[]>{
     return this.httpClient.get<User[]>(this.apiUrl)
   }
 
@@ -34,5 +34,15 @@ export class UserService {
   // Deleta o usuario do banco: DELETE
   deleteUser(id: number): Observable<User>{
     return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`)
+  }
+
+  // Edita o usuario UPDATE
+  updateUser(id: string, user: User):Observable<User>{
+    return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`,  user, this.httpOptions) // put: ser para atualizar os dados
+  }
+
+  // lista usuario unico
+  getUser(id: string):Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.apiUrl}/id/${id}`)
   }
 }
