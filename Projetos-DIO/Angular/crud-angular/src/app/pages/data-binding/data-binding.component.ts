@@ -6,10 +6,26 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./data-binding.component.css']
 })
 export class DataBindingComponent implements OnInit {
+  text = 'Miguel Azevedo'
+  img = 'https://picsum.photos/300/300'
+  buttonText = 'Clique aqui'
+  textRed = false
+  bgColor = 'Green'
+  fontSize = '20px'
+  widthImg = 600
+  inputText = ''
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  retornaNome() {
+    return this.text
+  }
+
+  clicou(value:string) {
+    console.log('clicou aqui', value)
+    this.textRed = true;
+  }
 }

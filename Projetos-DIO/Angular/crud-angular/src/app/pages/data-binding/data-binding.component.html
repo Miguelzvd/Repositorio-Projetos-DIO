@@ -1,1 +1,12 @@
-<p>data-binding works!</p>
+<h1 [class.text-red]="textRed" [style.fontSize]="fontSize">O nome eh: {{ retornaNome() }}</h1>
+
+<img [src]="img" alt="imageDesc" [style.width.px]="widthImg">
+
+<button [attr.aria-label]="buttonText" [style.backgroundColor]="bgColor">{{ buttonText }}</button>
+
+<input #input (keyup)="clicou(input.value)">
+
+{{ input.value }}
+
+<input type="text" class="form-control" [(ngModel)]="inputText">
+<p class="text-default">{{ inputText }}</p>
