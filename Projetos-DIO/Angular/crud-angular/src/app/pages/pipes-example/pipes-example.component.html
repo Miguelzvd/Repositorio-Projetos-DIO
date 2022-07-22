@@ -42,7 +42,7 @@
       <div class="form-group">
         <label for="text">Print Pipe Test:</label>
         <input type="text" name="text" id="text" #nome/>
-        <button class="btn btn-primary" (click)="add(nome.value); nome.value = ''">add</button>
+        <button class="btn btn-primary" (keyup.enter)="add(nome.value); nome.value=''" (click)="add(nome.value); nome.value = ''">add</button>
       </div>
     </div>
     <div class="row-6">

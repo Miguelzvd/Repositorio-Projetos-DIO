@@ -22,7 +22,9 @@ export class PipesExampleComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.text = this.upperCasePipe.transform(this.text)
+
+    this.text = this.upperCasePipe.transform(this.text);
+
   }
 
   mudaValor() {

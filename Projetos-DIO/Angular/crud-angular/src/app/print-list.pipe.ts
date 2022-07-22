@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'printList'
+  name: 'printList',
+  pure: false
 })
 export class PrintListPipe implements PipeTransform {
 
@@ -9,7 +10,7 @@ export class PrintListPipe implements PipeTransform {
     let returnStr = '';
     if(value.length){
       value.forEach(val => {
-        returnStr = returnStr + '' + val;
+        returnStr = returnStr + ' ' + val;
       });
     };
     return returnStr;
